@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Shopping Cart in ReactJS with react-bootstrap
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a shopping cart with ReactJS with react-bootstrap(Filtering based on type, price, color and gender)
 
 ## Available Scripts
 
