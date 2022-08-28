@@ -54,10 +54,6 @@ const Home = () => {
         ) : (
           <NotFound />
         )}
-
-        {/* {transformProducts().map((prod: any) => (
-          <Product prod={prod} key={prod.id} />
-        ))} */}
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ export const productReducer = (state: any, action: any) => {
     case "FILTER_BY_SEARCH":
       return { ...state, searchQuery: action.payload };
     case "CLEAR_FILTERS":
-      return { byColor: [], byGender: [], byType: [] };
+      return { byColor: [], byGender: [], byType: [], byPrice: 0 };
     default:
       return state;
   }

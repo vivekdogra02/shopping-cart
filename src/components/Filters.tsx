@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-expressions */
 
 import { useMemo, useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { CartState } from "../context/Context";
 import { getUniqueItems } from "../utils/utils";
+import { FcClearFilters } from "react-icons/fc";
 
 const Filters = ({ totalFiltered }: any) => {
   const {
@@ -76,7 +77,12 @@ const Filters = ({ totalFiltered }: any) => {
   };
   return (
     <div className="filters">
-      <span className="title">Filter Products : {totalFiltered.length}</span>
+      <div className="filter-top-section">
+        <span className="title">Filter: {totalFiltered.length}</span>
+        <span>
+          <FcClearFilters size={40} onClick={clearFilters}></FcClearFilters>
+        </span>
+      </div>
       <div>
         <div>Colors</div>
         {GroupItems("color").map((field, key) => (
@@ -151,9 +157,6 @@ const Filters = ({ totalFiltered }: any) => {
           />
         </>
       </div>
-      <Button variant="light" style={{ marginTop: 10 }} onClick={clearFilters}>
-        Clear Filters
-      </Button>
     </div>
   );
 };
